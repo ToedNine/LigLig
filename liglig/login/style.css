@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+  color: #000;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem 0;
+  color: #000000;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1469a0;
+  padding: 1rem 2rem;
+}
+
+.navbar .left-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar .logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+  color: #00bcd4;
+}
+
+.container {
+  display: flex;
+  padding: 2rem;
+  color: #000;
+  transition: color 0.3s;
+  gap: 3rem;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.logo-img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.form-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form label {
+  font-weight: bold;
+}
+
+.form input,
+.form select,
+.form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.form input,
+.form select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.form button {
+  background-color: #2b21ec;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: #1a14b8;
+}
+
+#dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+#dark-mode-toggle:hover {
+  color: #00bcd4;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.success {
+  color: green;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.input-error {
+  border-color: red !important;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-img {
+    max-width: 200px;
+    margin-bottom: 1rem;
+  }
+
+  .form-wrapper {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+html.dark body {
+  background-color: #111;
+  color: #eee;
+}
+
+html.dark h1 {
+  color: #eee;
+}
+
+html.dark label {
+  color: #eee;
+}
+
+html.dark .form-wrapper {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea,
+html.dark button {
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+html.dark input::placeholder {
+  color: #bbb;
+}
+
+html.dark #dark-mode-toggle {
+  color: #eee;
+}
+
+html.dark #dark-mode-toggle:hover {
+  color: #00bcd4;
+}
+
+html.dark .form button {
+  background-color: #3d3dff;
+}
+
+html.dark .form button:hover {
+  background-color: #2a2ab3;
+}
+
+.primeiro-acesso {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  background-color: transparent;
+  border: 1px solid #1469a0;
+  color: #1469a0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.primeiro-acesso:hover {
+  background-color: #1469a0;
+  color: #fff;
+}
+
+html.dark .primeiro-acesso {
+  border-color: #00bcd4;
+  color: #00bcd4;
+}
+
+html.dark .primeiro-acesso:hover {
+  background-color: #00bcd4;
+  color: #000;
+}
+
+.font-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.font-controls button {
+  background-color: #1469a0 !important;
+  color: #fff !important;
+  border: none !important;
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.font-controls button:hover {
+  background-color: #00bcd4 !important;
+  color: #000 !important;
+}
+
+body.dark .font-controls button {
+  background-color: #00bcd4 !important;
+  color: #000 !important;
+}
+
+body.dark .font-controls button:hover {
+  background-color: #1a9fb3 !important;
+  color: #fff !important;
+}
+
+button#logout-btn {
+  background-color: #00bcd4;
+  border: none;
+  color: #000;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
