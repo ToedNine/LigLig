@@ -1,4 +1,9 @@
-// Funções de máscara e validação
+document.addEventListener("DOMContentLoaded", function () {
+  const campoNascimento = document.getElementById("nascimento");
+  aplicarMascaraData(campoNascimento);
+});
+
+
 function mascaraCPF(value) {
   return value
     .replace(/\D/g, "")
@@ -32,7 +37,6 @@ function protegerPrefixo(input) {
   });
 }
 
-// Elementos do DOM
 const cpfInput = document.getElementById("cpf");
 const celularInput = document.getElementById("celular");
 const fixoInput = document.getElementById("fixo");
@@ -68,7 +72,6 @@ cepInput.addEventListener("input", () => {
   cepInput.value = cep;
 });
 
-// Validações
 function validarCPF(cpf) {
   cpf = cpf.replace(/\D/g, "");
   if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
@@ -96,7 +99,6 @@ function validarTelefone(tel) {
   return /^\(\+55\)\d{2}-\d{8}$/.test(tel);
 }
 
-// CEP
 cepInput.addEventListener("blur", async () => {
   const cep = cepInput.value.replace(/\D/g, "");
   if (cep.length !== 8) return cepInput.classList.add("input-error");
@@ -117,7 +119,6 @@ cepInput.addEventListener("blur", async () => {
   }
 });
 
-// SUBMISSÃO DO FORMULÁRIO
 const form = document.getElementById("formCadastro");
 form.addEventListener("submit", (e) => {
   e.preventDefault();

@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     localStorage.setItem("userLoggedIn", login);
 
-    window.location.href = "../home/index.php";
+    window.location.href = "../home/index.html";
   });
 
   const loginInput = document.getElementById("login");

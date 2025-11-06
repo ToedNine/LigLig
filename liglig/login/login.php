@@ -36,26 +36,12 @@
         <li><a href="../home/index.php">Início</a></li>
         <li><a href="../register/register.php">Registrar</a></li>
         <li><a href="../login/login.php">Entrar</a></li>
-        <li><a href="../products/products.php">Produtos</a></li>
       </ul>
 
-      <button id="menu-toggle" class="menu-toggle" style="display:none;">
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <aside id="sidebar" class="sidebar">
-        <div class="sidebar-header">
-          <h2>Olá, <span id="user-name"></span> 👋</h2>
-          <button id="close-sidebar"><i class="fas fa-times"></i></button>
-        </div>
-        <ul class="sidebar-links">
-          <li><a href="../home/index.php"><i class="fas fa-home"></i> Início</a></li>
-          <li><a href="../perfil/perfil.php"><i class="fas fa-user"></i> Meu Perfil</a></li>
-          <li><a href="../pedidos/pedidos.php"><i class="fas fa-box"></i> Meus Pedidos</a></li>
-          <li><a href="../carrinho/carrinho.php"><i class="fas fa-shopping-cart"></i> Carrinho</a></li>
-        </ul>
-        <button id="logout-btn" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</button>
-      </aside>
+      <div id="user-info" style="display: none; gap: 1rem; align-items: center; color: white;">
+        <span id="user-name" style="font-weight: bold;"></span>
+        <button id="logout-btn">Sair</button>
+      </div>
     </nav>
   </header>
 
@@ -87,6 +73,37 @@
       </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-section">
+        <h3>LigLig Cell</h3>
+        <p>Assistência técnica e venda de celulares, acessórios e eletrônicos.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contato</h4>
+        <p><i class="fas fa-phone"></i> (21) 99999-9999</p>
+        <p><i class="fas fa-envelope"></i> contato@ligligcell.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Rua dos Estampadores, 201 - Rio de Janeiro/RJ</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Redes Sociais</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 LigLig Cell — Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
   <script src="login.js"></script>
 </body>
